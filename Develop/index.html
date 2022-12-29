@@ -8,27 +8,61 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
+
+    <div class = 'parent-gen-pwd'>
+
+      <div class = 'output' id = 'output'> Password </div>
+
+      <div class = 'wrapper-input'>
+
+        <label for = 'lengthPwd'> Length </label>
+        <input type = 'range' id = 'lengthPwd' min = '8' max = '128'
+        value = '50' oninput="this.nextElementSibling.
+        textContent = this.value">
+        <span>64</span>
+
       </div>
+
+      <div class = 'wrapper-input'>
+
+        <label for = 'smallLetters'> Lower Case </label>
+        <input type = 'checkbox' id = 'smallLetters' checked> 
+
+      </div>
+
+      <div class = 'wrapper-input'>
+
+        <label for = 'bigLetters'> Upper Case </label>
+        <input type = 'checkbox' id = 'bigLetters' checked> 
+
+      </div>
+
+      <div class = 'wrapper-input'>
+
+        <label for = 'numbers'> Numbers </label>
+        <input type = 'checkbox' id = 'numbers' checked> 
+        
+      </div>
+
+      <div class = 'wrapper-input'>
+
+        <label for = 'special'> Special Characters </label>
+        <input type = 'checkbox' id = 'special' checked> 
+        
+      </div>
+
+      <div class = 'wrapper-input'>
+
+        <button type = 'button' id = 'generate'> Generate </button>
+        <button type = 'button' id = 'copy'> Copy </button>
+        
+      </div>
+
+
+
     </div>
     <script src="script.js"></script>
   </body>
-</html>
+</html> 
+
+
